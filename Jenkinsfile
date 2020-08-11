@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "9538603484/petclinic"
+    registry = "9538603484/flightbooking"
     registryCredential = 'docker_hub_9538603484'
     dockerImage = ''
   }
@@ -40,8 +40,8 @@ pipeline {
     stage ('Deploy to Dev') {
       steps{
         echo "Deploying to Dev Environment"
-        sh "docker rm -f petclinic || true"
-        sh "docker run -d --name=petclinic -p 8081:8080 9538603484/petclinic"
+        sh "docker rm -f flightbooking || true"
+        sh "docker run -d --name=flightbooking -p 8081:8080 9538603484/flightbooking"
       }
     }
   }
