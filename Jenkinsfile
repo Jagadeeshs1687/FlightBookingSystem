@@ -1,9 +1,5 @@
 pipeline {
-  environment {
-    registry = "9538603484/flightbooking"
-    registryCredential = 'docker_hub_9538603484'
-    dockerImage = ''
-  }
+  
   agent any
   stages{
     stage ('Build') {
